@@ -11,7 +11,6 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $?
 	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
 
 $(ODIR)%.o: %.c
 	mkdir -p $(ODIR)

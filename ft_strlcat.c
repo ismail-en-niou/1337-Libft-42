@@ -6,15 +6,15 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:22:23 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/10/25 20:33:11 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/10/26 13:46:27 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcat(char *restrict dst, const char *restrict src, size_t size)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 {
-    size_t	dest_size;
+	size_t	dest_size;
 	size_t	src_size;
 	size_t	i;
 
