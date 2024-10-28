@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 17:41:20 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/10/27 16:21:35 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/10/28 11:20:21 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
 
-	 if ( dst == src && len ==0)
-        return dst;
+	if (dst == src || len == 0)
+		return (dst);
 	if (dst > src)
 	{
 		i = (int)len - 1;
@@ -37,11 +37,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	return (dst);
-}
-#include <string.h>
-int main()
-{
-	char *src = NULL;
-	char *dst = NULL;
-	memmove(dst,src , 0);
 }

@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 12:03:28 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/10/27 12:43:34 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/10/28 12:14:06 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*rest;
-	int				len;
+	unsigned int	len;
 
 	if (!s)
 		return (NULL);
@@ -25,7 +25,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!rest)
 		return (NULL);
 	i = 0;
-	while (s[i] < len)
+	while (i < len)
 	{
 		rest[i] = f(i, s[i]);
 		i++;
