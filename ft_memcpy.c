@@ -6,17 +6,26 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:32:53 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/10/25 17:40:41 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/10/27 12:39:30 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	while (n-- > 0)
+	size_t	i;
+
+	i = 0;
+	if (!dst && !src)
+		return (NULL);
+	if (dst != src)
 	{
-		((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
+		while (i < n)
+		{
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
 	}
 	return (dst);
 }

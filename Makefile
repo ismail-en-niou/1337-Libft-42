@@ -12,7 +12,7 @@ all: $(NAME)
 $(NAME): $(OBJ) $?
 	ar rc $(NAME) $(OBJ)
 
-$(ODIR)%.o: %.c
+$(ODIR)%.o: %.c libft.h
 	mkdir -p $(ODIR)
 	$(CC) $(FLAGS) -c $< -o $@
 

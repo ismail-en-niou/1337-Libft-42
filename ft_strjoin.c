@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:19:54 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/10/26 13:55:05 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/10/27 16:35:08 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s2_len;
 	char	*res;
 
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 		return (NULL);
 	if (!s2)
 		return (ft_strdup(s1));

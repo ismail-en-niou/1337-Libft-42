@@ -6,15 +6,15 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:42:51 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/10/23 14:56:48 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/10/27 12:58:46 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	toupper(int c)
+int	ft_toupper(int c)
 {
-	if (c <= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		c -= 32;
 	return (c);
 }
