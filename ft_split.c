@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void *ft_free(char **res, int j)
+static void	*ft_free(char **res, int j)
 {
 	while (j > 0)
 		free(res[--j]);
@@ -80,7 +80,7 @@ char	**ft_split(char const *s, char c)
 		{
 			res[j] = ft_strcpy_w(&s[i], c);
 			if (!res[j++])
-				return (ft_free(res, j -1));
+				return (ft_free(res, j - 1));
 			while (s[i] && (s[i] != c))
 				i++;
 		}
