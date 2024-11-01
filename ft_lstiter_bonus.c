@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 17:41:20 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/01 15:44:12 by ien-niou         ###   ########.fr       */
+/*   Created: 2024/11/01 15:51:48 by ien-niou          #+#    #+#             */
+/*   Updated: 2024/11/01 15:52:04 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	i;
+	t_list	*list_ptr;
 
-	 if ( dst == src && len ==0)
-        return dst;
-	if (dst > src)
+	if (!lst)
+		return ;
+	list_ptr = lst;
+	while (list_ptr != NULL)
 	{
-		i = (int)len - 1;
-		while (i >= 0)
-		{
-			*(char *)(dst + i) = *(char *)(src + i);
-			i--;
-		}
+		(*f)(list_ptr->content);
+		list_ptr = list_ptr->next;
 	}
-	else
-	{
-		i = 0;
-		while (i < (int)len)
-		{
-			*(char *)(dst + i) = *(char *)(src + i);
-			i++;
-		}
-	}
-	return (dst);
 }

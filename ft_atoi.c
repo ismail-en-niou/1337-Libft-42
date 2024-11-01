@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:56:14 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/10/28 10:44:28 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/01 15:43:31 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
+		result = result * 10 + (str[i] - '0');
 		if (result >= 9223372036854775807 && sign == 1)
 			return (-1);
 		if (result > 9223372036854775807 && sign == -1)
 			return (0);
-		result = result * 10 + (str[i] - '0');
 		i++;
 	}
 	return (result * sign);
