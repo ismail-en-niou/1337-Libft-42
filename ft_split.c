@@ -6,17 +6,18 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:33:36 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/10/27 12:31:03 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/01 15:42:39 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_free(char **res, int j)
+static void *ft_free(char **res, int j)
 {
 	while (j > 0)
 		free(res[--j]);
 	free(res);
+	return (NULL);
 }
 
 static char	*ft_strcpy_w(char const *src, char sep)
@@ -78,9 +79,8 @@ char	**ft_split(char const *s, char c)
 		if (s[i])
 		{
 			res[j] = ft_strcpy_w(&s[i], c);
-			if (!res[j])
-				ft_free(res, j);
-			j++;
+			if (!res[j++])
+				return (ft_free(res, j -1));
 			while (s[i] && (s[i] != c))
 				i++;
 		}
