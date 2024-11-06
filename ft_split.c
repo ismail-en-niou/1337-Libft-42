@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:33:36 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/01 15:42:39 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:45:59 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,12 @@ static int	count_word(char const *str, char sep)
 	return (count);
 }
 
+void	tet(char *s)
+{
+	if (!s)
+		return (malloc(1));
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -69,6 +75,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	tet(s);
 	res = malloc((count_word(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);

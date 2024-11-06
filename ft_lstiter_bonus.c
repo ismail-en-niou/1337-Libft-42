@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 15:51:48 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/01 15:52:04 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:51:08 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*list_ptr;
 
-	if (!lst)
+	if (!lst || !f)
 		return ;
 	list_ptr = lst;
 	while (list_ptr != NULL)

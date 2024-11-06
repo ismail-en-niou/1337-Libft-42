@@ -6,12 +6,11 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:56:14 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/01 15:43:31 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:48:56 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 int	ft_atoi(const char *str)
 {
