@@ -14,9 +14,8 @@ BONUS_SRC = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
             ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c \
             ft_lstmap_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c
 
-ODIR = bin/
-OBJ = $(addprefix $(ODIR), $(SRC:.c=.o))
-BONUS_OBJ = $(addprefix $(ODIR), $(BONUS_SRC:.c=.o))
+OBJ = $(SRC:.c=.o)
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 BONUS_FLAG = .bonus
 
@@ -25,18 +24,17 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
-bonus: $(NAME) $(BONUS_FLAG)
+bonus: $(BONUS_FLAG)
 
 $(BONUS_FLAG): $(BONUS_OBJ)
-	ar -r $(NAME) $(BONUS_OBJ)
+	ar rc $(NAME) $(BONUS_OBJ)
 	@touch $(BONUS_FLAG)
 
 $(ODIR)%.o: %.c libft.h
-	@mkdir -p $(ODIR)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(ODIR) $(BONUS_FLAG)
+	rm -rf *.o $(BONUS_FLAG)
 
 fclean: clean
 	rm -f $(NAME)
