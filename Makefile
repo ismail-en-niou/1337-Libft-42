@@ -21,16 +21,16 @@ BONUS_FLAG = .bonus
 
 all: $(NAME)
 
+bonus: $(BONUS_FLAG) $(NAME)
+
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
-
-bonus: $(BONUS_FLAG)
 
 $(BONUS_FLAG): $(BONUS_OBJ)
 	ar rc $(NAME) $(BONUS_OBJ)
 	@touch $(BONUS_FLAG)
 
-$(ODIR)%.o: %.c libft.h
+%.o: %.c libft.h
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
