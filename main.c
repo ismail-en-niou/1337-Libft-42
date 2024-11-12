@@ -1,51 +1,30 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "libft.h"  // For ft_atoi and ft_lstnew, ft_lstadd_front
+#include <string.h>
+#include "libft.h"
 
-void print_list(t_list *test)
+char	*longestCommonPrefix(char **str, int strsSize)
 {
-    while (test)
-    {
-        printf("%s\n", (char *)test->content);
-        test = test->next;
-    }
+	static char	test[250] = {};
+	char		currentChar;
+
+	if (strsSize == 0)
+		return (test);
+	for (int i = 0; i < strlen(str[0]); i++)
+	{
+		currentChar = str[0][i];
+		for (int j = 1; j < strsSize; j++)
+		{
+			if (i >= strlen(str[j]) || str[j][i] != currentChar)
+			{
+				test[i] = '\0';
+			}
+		}
+		test[i] = currentChar;
+	}
+	return (test);
 }
 
-void apply_negate(void *content)
+int	main(void)
 {
-    int nb = ft_atoi(content) * -1;
-    content = ft_itoa(nb);
-}
-
-
-
-int main()
-{
-    int count = 5;
-    int nb = 1; 
-    t_list *test = NULL;
-
-    while (nb <= count)
-    {
-        t_list *new = ft_lstnew(ft_itoa(nb));
-        ft_lstadd_back(&test, new);
-        nb++;
-    }
-
-    printf("Original list:\n");
-    print_list(test);
-    ft_lstiter(test, apply_negate);
-
-    printf("Negated list:\n");
-    print_list(test);
-
-    while (test)
-    {
-        t_list *tmp = test;
-        free(test->content);
-        test = test->next;
-        free(tmp);
-    }
-
-    return 0;
+	strdup(NULL);
 }

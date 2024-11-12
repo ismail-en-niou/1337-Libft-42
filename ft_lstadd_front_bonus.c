@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:17:54 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/07 10:13:20 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/11 09:21:47 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (new && lst)
+	if (new &&lst)
 	{
 		new->next = *lst;
 		*lst = new;

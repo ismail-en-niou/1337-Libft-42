@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 10:11:25 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/07 10:12:41 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/11 15:26:28 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ static int	count_word(char const *str, char sep)
 
 	count = 0;
 	i = 0;
+	if (!str)
+		return (0);
 	while (str[i])
 	{
 		while (str[i] && str[i] == sep)

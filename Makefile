@@ -21,7 +21,7 @@ BONUS_FLAG = .bonus
 
 all: $(NAME)
 
-bonus: $(BONUS_FLAG) $(NAME)
+bonus: $(BONUS_FLAG)
 
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
