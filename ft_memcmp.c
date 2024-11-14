@@ -16,6 +16,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	x;
 
+	if (s2 == s1 || n == 0)
+		return 0;
 	x = -1;
 	while (++x < n)
 	{
