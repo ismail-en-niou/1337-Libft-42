@@ -6,13 +6,13 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 11:44:53 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/10/27 16:00:00 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:04:56 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	talis(int n)
+static int	ft_nb_len(int n)
 {
 	int		i;
 	long	x;
@@ -56,7 +56,7 @@ char	*ft_itoa(int x)
 	long	n;
 
 	n = x;
-	len = talis(n);
+	len = ft_nb_len(n);
 	sign = 0;
 	if (n < 0)
 	{

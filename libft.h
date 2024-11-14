@@ -6,13 +6,13 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 10:43:48 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/01 16:57:47 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:05:37 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h>
+// # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 

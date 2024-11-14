@@ -1,5 +1,14 @@
+<<<<<<< HEAD
+{
+    "files.associations": {
+        "limits.h": "c",
+        "sstream": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+=======
 {
     "files.associations": {
         "limits.h": "c"
     }
+>>>>>>> main
 }

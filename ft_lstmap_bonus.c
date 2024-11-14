@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:30:00 by ien-niou          #+#    #+#             */
-/*   Updated: 2024/11/01 15:40:32 by ien-niou         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:05:10 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*node;
 	void	*content;
 
-	if (!f || !lst)
+	if (!f || !lst || !del)
 		return (NULL);
 	new = NULL;
 	while (lst)
